@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>消化器内科 英語略語集</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Hiragino Sans',sans-serif;background:#f5f7fa;color:#222;min-height:100vh}
+header{background:#1A5276;color:#fff;padding:18px 24px;display:flex;align-items:center;gap:12px}
+header h1{font-size:20px;font-weight:600;letter-spacing:.02em}
+header p{font-size:13px;opacity:.75;margin-top:2px}
+.setup-banner{background:#fff3cd;border:1px solid #ffc107;padding:14px 20px;margin:20px;border-radius:8px;font-size:13px;line-height:1.7;display:none}
+.setup-banner.show{display:block}
+.setup-banner code{background:#f0e0a0;padding:1px 5px;border-radius:3px;font-size:12px}
+.setup-banner a{color:#1A5276;font-weight:600}
+.container{max-width:960px;margin:24px auto;padding:0 16px}
+.card{background:#fff;border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,.08);padding:20px;margin-bottom:20px}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
+.toolbar input[type=text]{flex:1;min-width:180px;height:38px;border:1px solid #ddd;border-radius:6px;padding:0 12px;font-size:14px;outline:none}
+.toolbar input:focus{border-color:#1A5276}
+.toolbar select{height:38px;border:1px solid #ddd;border-radius:6px;padding:0 10px;font-size:14px;background:#fff}
+.btn{height:38px;padding:0 16px;border-radius:6px;border:1px solid #ddd;cursor:pointer;font-size:13px;background:#fff;white-space:nowrap}
+.btn-primary{background:#1A5276;color:#fff;border-color:#1A5276}
+.btn-primary:hover{background:#154360}
+.btn:hover{background:#f0f0f0}
+.cat-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.tab{padding:5px 14px;font-size:13px;border-radius:20px;border:1px solid #ddd;cursor:pointer;background:#fff;color:#555;transition:all .15s}
+.tab.active{background:#1A5276;color:#fff;border-color:#1A5276}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;padding:9px 12px;font-size:12px;font-weight:600;color:#666;border-bottom:2px solid #eee;background:#fafafa;position:sticky;top:0;z-index:1}
+td{padding:9px 12px;border-bottom:1px solid #f0f0f0;vertical-align:middle}
+tr:hover td{background:#f8fbff}
+.abbr{font-weight:700;color:#1A5276;min-width:90px}
+.en{color:#555;font-size:12px}
+.badge{display:inline-block;font-size:11px;padding:2px 9px;border-radius:10px;white-space:nowrap;font-weight:500}
+.badge-d{background:#fde8e8;color:#b03030}
+.badge-p{background:#e8f5e9;color:#2e7d32}
+.badge-l{background:#fff8e1;color:#a07000}
+.badge-m{background:#e3f0fb;color:#1A5276}
+.act{text-align:right;white-space:nowrap}
+.icon-btn{background:none;border:none;cursor:pointer;padding:4px 7px;border-radius:4px;font-size:15px;color:#888;line-height:1}
+.icon-btn:hover{background:#f0f0f0}
+.del:hover{color:#c0392b}
+.empty{text-align:center;padding:48px;color:#aaa;font-size:14px}
+.stats{font-size:12px;color:#aaa;margin-left:auto}
+.status{font-size:12px;padding:6px 12px;border-radius:6px;display:none}
+.status.show{display:inline-block}
+.status.ok{background:#e8f5e9;color:#2e7d32}
+.status.err{background:#fde8e8;color:#c0392b}
+.status.loading{background:#e3f0fb;color:#1A5276}
+
+/* Modal */
+.backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:200;align-items:center;justify-content:center}
+.backdrop.open{display:flex}
+.modal{background:#fff;border-radius:12px;padding:24px;width:95%;max-width:460px;box-shadow:0 8px 32px rgba(0,0,0,.18)}
+.modal h3{font-size:16px;font-weight:600;margin-bottom:18px;color:#1A5276}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:12px;color:#666;margin-bottom:5px;font-weight:500}
+.field input,.field select{width:100%;height:38px;border:1px solid #ddd;border-radius:6px;padding:0 12px;font-size:14px;outline:none}
+.field input:focus,.field select:focus{border-color:#1A5276}
+.modal-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}
+
+/* Setup modal */
+.setup-modal{max-width:560px}
+.setup-modal h3{margin-bottom:12px}
+.steps{counter-reset:step;margin:12px 0}
+.step{counter-increment:step;display:flex;gap:10px;margin-bottom:14px;font-size:13px;line-height:1.6}
+.step::before{content:counter(step);min-width:22px;height:22px;background:#1A5276;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;margin-top:1px}
+.step code{background:#f0f4f8;padding:1px 6px;border-radius:3px;font-size:12px;word-break:break-all}
+.url-input-wrap{display:flex;gap:8px;margin-top:8px}
+.url-input-wrap input{flex:1;height:36px;border:1px solid #ddd;border-radius:6px;padding:0 10px;font-size:13px}
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>消化器内科　英語略語集</h1>
+    <p>Gastroenterology Abbreviation Reference</p>
+  </div>
+  <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
+    <span class="status" id="status"></span>
+    <button class="btn" onclick="openSetup()" style="font-size:12px;height:32px;padding:0 12px">⚙ 接続設定</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="setup-banner show" id="banner">
+    ⚠ <strong>初回セットアップが必要です。</strong>
+    右上の「⚙ 接続設定」からGoogleスプレッドシートのURLを設定してください。
+    設定方法は接続設定画面に記載されています。
+  </div>
+
+  <div class="card">
+    <div class="toolbar">
+      <input type="text" id="search" placeholder="略語・日本語・英語で検索..." oninput="render()">
+      <select id="catFilter" onchange="render()"><option value="">すべてのカテゴリ</option></select>
+      <button class="btn" onclick="exportCSV()">↓ CSV</button>
+      <button class="btn btn-primary" onclick="openAdd()">＋ 追加</button>
+      <button class="btn" onclick="loadFromSheet()" title="再読み込み">↻ 更新</button>
+      <span class="stats" id="stats"></span>
+    </div>
+    <div class="cat-tabs" id="tabs"></div>
+    <div style="overflow-x:auto">
+      <table>
+        <thead><tr>
+          <th style="width:13%">略語</th>
+          <th style="width:34%">英語正式名</th>
+          <th style="width:33%">日本語</th>
+          <th style="width:12%">カテゴリ</th>
+          <th style="width:8%"></th>
+        </tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- 追加・編集モーダル -->
+<div class="backdrop" id="modal">
+  <div class="modal">
+    <h3 id="modal-title">略語を追加</h3>
+    <div class="field"><label>略語 *</label><input id="f-abbr" placeholder="例: GERD"></div>
+    <div class="field"><label>英語正式名 *</label><input id="f-en" placeholder="例: Gastroesophageal Reflux Disease"></div>
+    <div class="field"><label>日本語 *</label><input id="f-ja" placeholder="例: 胃食道逆流症"></div>
+    <div class="field"><label>カテゴリ</label>
+      <select id="f-cat">
+        <option value="疾患・病態">疾患・病態</option>
+        <option value="検査・処置">検査・処置</option>
+        <option value="検査値・マーカー">検査値・マーカー</option>
+        <option value="薬剤・治療">薬剤・治療</option>
+      </select>
+    </div>
+    <div class="modal-actions">
+      <button class="btn" onclick="closeModal()">キャンセル</button>
+      <button class="btn btn-primary" onclick="saveEntry()">保存</button>
+    </div>
+  </div>
+</div>
+
+<!-- セットアップモーダル -->
+<div class="backdrop" id="setupModal">
+  <div class="modal setup-modal">
+    <h3>⚙ Googleスプレッドシート接続設定</h3>
+    <div class="steps">
+      <div class="step">
+        <div>
+          <strong>Googleスプレッドシートを新規作成</strong>し、1行目に以下のヘッダーを入力してください：<br>
+          <code>abbr</code>　<code>en</code>　<code>ja</code>　<code>cat</code><br>
+          （A列〜D列、この順番で）
+        </div>
+      </div>
+      <div class="step">
+        <div>
+          メニューの <strong>「拡張機能」→「Apps Script」</strong> を開き、以下のコードをすべて貼り付けて保存・デプロイしてください。<br>
+          <a href="#" onclick="showScript();return false" style="color:#1A5276">▶ コードを表示</a>
+          <pre id="script-block" style="display:none;margin-top:8px;background:#f5f5f5;padding:10px;border-radius:6px;font-size:11px;overflow-x:auto;white-space:pre-wrap">function doGet(e){
+  const ss=SpreadsheetApp.getActiveSpreadsheet();
+  const sh=ss.getActiveSheet();
+  const rows=sh.getDataRange().getValues();
+  const headers=rows[0];
+  const data=rows.slice(1).map(r=>Object.fromEntries(headers.map((h,i)=>[h,r[i]])));
+  return ContentService.createTextOutput(JSON.stringify(data))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+
+function doPost(e){
+  const ss=SpreadsheetApp.getActiveSpreadsheet();
+  const sh=ss.getActiveSheet();
+  const body=JSON.parse(e.postData.contents);
+  if(body.action==='add'){
+    sh.appendRow([body.abbr,body.en,body.ja,body.cat]);
+  } else if(body.action==='delete'){
+    const rows=sh.getDataRange().getValues();
+    for(let i=rows.length-1;i>=1;i--){
+      if(rows[i][0]===body.abbr&&rows[i][2]===body.ja){sh.deleteRow(i+1);break;}
+    }
+  } else if(body.action==='update'){
+    const rows=sh.getDataRange().getValues();
+    for(let i=1;i<rows.length;i++){
+      if(rows[i][0]===body.orig_abbr&&rows[i][2]===body.orig_ja){
+        sh.getRange(i+1,1,1,4).setValues([[body.abbr,body.en,body.ja,body.cat]]);break;
+      }
+    }
+  }
+  return ContentService.createTextOutput(JSON.stringify({ok:true}))
+    .setMimeType(ContentService.MimeType.JSON);
+}</pre>
+        </div>
+      </div>
+      <div class="step">
+        <div>
+          デプロイ時は「<strong>ウェブアプリ</strong>」を選択し、アクセス権を<strong>「全員」</strong>に設定してください。発行されたURLをコピーします。
+        </div>
+      </div>
+      <div class="step">
+        <div>
+          コピーしたURLを下に貼り付けて「保存」してください。
+          <div class="url-input-wrap">
+            <input type="text" id="sheet-url" placeholder="https://script.google.com/macros/s/...">
+            <button class="btn btn-primary" onclick="saveSheetUrl()">保存</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn" onclick="closeSetup()">閉じる</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const STORAGE_KEY = 'gi_abbr_sheet_url';
+const CAT_BADGE = {
+  '疾患・病態':    'badge-d',
+  '検査・処置':    'badge-p',
+  '検査値・マーカー':'badge-l',
+  '薬剤・治療':    'badge-m',
+};
+
+let data = [];
+let editOrig = null;
+let activeTab = '';
+let sheetUrl = localStorage.getItem(STORAGE_KEY) || 'https://script.google.com/macros/s/AKfycbxVUrgqso-koBawTjqoNhBgtHVAdf_vlLpjRlT-O2-enY7TjE2LeEVC97W3pfWYQ_FJlQ/exec';
+
+// ---- Sheet API ----
+async function api(body) {
+  if (!sheetUrl) { showStatus('err', 'スプレッドシートURLが未設定です'); return false; }
+  try {
+    const res = await fetch(sheetUrl, {
+      method: 'POST',
+      body: JSON.stringify(body),
+    });
+    return true;
+  } catch(e) {
+    showStatus('err', '通信エラー: ' + e.message);
+    return false;
+  }
+}
+
+async function loadFromSheet() {
+  if (!sheetUrl) return;
+  showStatus('loading', '読み込み中...');
+  try {
+    const res = await fetch(sheetUrl);
+    const json = await res.json();
+    data = json.filter(r => r.abbr).map((r, i) => ({
+      id: i,
+      abbr: r.abbr || '',
+      en: r.en || '',
+      ja: r.ja || '',
+      cat: r.cat || '疾患・病態',
+    }));
+    showStatus('ok', `${data.length}件読み込みました`);
+    document.getElementById('banner').classList.remove('show');
+    render();
+  } catch(e) {
+    showStatus('err', '読み込み失敗: URLを確認してください');
+  }
+}
+
+// ---- UI ----
+function showStatus(type, msg) {
+  const el = document.getElementById('status');
+  el.className = 'status show ' + type;
+  el.textContent = msg;
+  if (type !== 'loading') setTimeout(() => el.classList.remove('show'), 3000);
+}
+
+function cats() { return [...new Set(data.map(d => d.cat))]; }
+
+function buildTabs() {
+  const tabs = document.getElementById('tabs');
+  const sel = document.getElementById('catFilter');
+  const all = cats();
+  tabs.innerHTML = `<button class="tab ${activeTab===''?'active':''}" onclick="setTab('')">すべて</button>`
+    + all.map(c => `<button class="tab ${activeTab===c?'active':''}" onclick="setTab('${esc(c)}')">${esc(c)}</button>`).join('');
+  sel.innerHTML = `<option value="">すべてのカテゴリ</option>`
+    + all.map(c => `<option value="${esc(c)}" ${activeTab===c?'selected':''}>${esc(c)}</option>`).join('');
+}
+
+function setTab(c) { activeTab = c; document.getElementById('catFilter').value = c; render(); }
+
+function render() {
+  const q = document.getElementById('search').value.toLowerCase();
+  const cf = document.getElementById('catFilter').value;
+  if (cf !== activeTab) activeTab = cf;
+  buildTabs();
+  let rows = data.filter(d => {
+    if (cf && d.cat !== cf) return false;
+    if (!q) return true;
+    return d.abbr.toLowerCase().includes(q) || d.en.toLowerCase().includes(q) || d.ja.includes(q);
+  });
+  rows.sort((a, b) => a.abbr.localeCompare(b.abbr, 'ja'));
+  document.getElementById('stats').textContent = `${rows.length} / ${data.length} 件`;
+  const tbody = document.getElementById('tbody');
+  if (!rows.length) {
+    tbody.innerHTML = `<tr><td colspan="5" class="empty">該当する略語が見つかりません</td></tr>`;
+    return;
+  }
+  tbody.innerHTML = rows.map((d, i) => `<tr>
+    <td class="abbr">${esc(d.abbr)}</td>
+    <td class="en">${esc(d.en)}</td>
+    <td>${esc(d.ja)}</td>
+    <td><span class="badge ${CAT_BADGE[d.cat]||'badge-m'}">${esc(d.cat)}</span></td>
+    <td class="act">
+      <button class="icon-btn" onclick="openEdit(${d.id})" title="編集">✎</button>
+      <button class="icon-btn del" onclick="del(${d.id})" title="削除">✕</button>
+    </td></tr>`).join('');
+}
+
+function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+// ---- CRUD ----
+function openAdd() {
+  editOrig = null;
+  document.getElementById('modal-title').textContent = '略語を追加';
+  ['abbr','en','ja'].forEach(k => document.getElementById('f-'+k).value = '');
+  document.getElementById('f-cat').value = '疾患・病態';
+  document.getElementById('modal').classList.add('open');
+  document.getElementById('f-abbr').focus();
+}
+
+function openEdit(id) {
+  const d = data.find(x => x.id === id); if (!d) return;
+  editOrig = { abbr: d.abbr, ja: d.ja };
+  document.getElementById('modal-title').textContent = '略語を編集';
+  document.getElementById('f-abbr').value = d.abbr;
+  document.getElementById('f-en').value = d.en;
+  document.getElementById('f-ja').value = d.ja;
+  document.getElementById('f-cat').value = d.cat;
+  document.getElementById('modal').classList.add('open');
+}
+
+function closeModal() { document.getElementById('modal').classList.remove('open'); }
+
+async function saveEntry() {
+  const abbr = document.getElementById('f-abbr').value.trim();
+  const en   = document.getElementById('f-en').value.trim();
+  const ja   = document.getElementById('f-ja').value.trim();
+  const cat  = document.getElementById('f-cat').value;
+  if (!abbr || !en || !ja) { alert('略語・英語・日本語は必須です'); return; }
+  closeModal();
+
+  if (!sheetUrl) {
+    // オフラインモード（URLなし）
+    if (editOrig) {
+      const d = data.find(x => x.abbr === editOrig.abbr && x.ja === editOrig.ja);
+      if (d) Object.assign(d, { abbr, en, ja, cat });
+    } else {
+      data.push({ id: data.length, abbr, en, ja, cat });
+    }
+    render();
+    return;
+  }
+
+  showStatus('loading', '保存中...');
+  const body = editOrig
+    ? { action:'update', orig_abbr: editOrig.abbr, orig_ja: editOrig.ja, abbr, en, ja, cat }
+    : { action:'add', abbr, en, ja, cat };
+  const ok = await api(body);
+  if (ok) { showStatus('ok', '保存しました'); await loadFromSheet(); }
+}
+
+async function del(id) {
+  const d = data.find(x => x.id === id); if (!d) return;
+  if (!confirm(`「${d.abbr}」を削除しますか？`)) return;
+  if (!sheetUrl) {
+    data = data.filter(x => x.id !== id); render(); return;
+  }
+  showStatus('loading', '削除中...');
+  const ok = await api({ action:'delete', abbr: d.abbr, ja: d.ja });
+  if (ok) { showStatus('ok', '削除しました'); await loadFromSheet(); }
+}
+
+// ---- CSV ----
+function exportCSV() {
+  const rows = [['略語','英語正式名','日本語','カテゴリ'], ...data.map(d => [d.abbr,d.en,d.ja,d.cat])];
+  const csv = rows.map(r => r.map(v => '"' + String(v).replace(/"/g,'""') + '"').join(',')).join('\n');
+  const blob = new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = '消化器内科_略語集.csv';
+  a.click();
+}
+
+// ---- Setup ----
+function openSetup() {
+  document.getElementById('sheet-url').value = sheetUrl;
+  document.getElementById('setupModal').classList.add('open');
+}
+function closeSetup() { document.getElementById('setupModal').classList.remove('open'); }
+function saveSheetUrl() {
+  const url = document.getElementById('sheet-url').value.trim();
+  if (!url) { alert('URLを入力してください'); return; }
+  sheetUrl = url;
+  localStorage.setItem(STORAGE_KEY, url);
+  closeSetup();
+  document.getElementById('banner').classList.remove('show');
+  loadFromSheet();
+}
+function showScript() {
+  const el = document.getElementById('script-block');
+  el.style.display = el.style.display === 'none' ? 'block' : 'none';
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeModal(); closeSetup(); } });
+
+// 起動時
+if (sheetUrl) {
+  document.getElementById('banner').classList.remove('show');
+  loadFromSheet();
+} else {
+  render();
+}
+</script>
+</body>
+</html>
