@@ -231,8 +231,7 @@ function jumpTo(ch) {
   if (!el) return;
   const offset = 150;
   const top = el.getBoundingClientRect().top + window.scrollY - offset;
-  window.scrollTo({top, behavior:'smooth'});
-  // flash
+  window.scrollTo({top, behavior:'instant'});
   const btn = document.getElementById('idx-' + ch);
   if (btn) { btn.classList.add('active'); setTimeout(() => btn.classList.remove('active'), 400); }
 }
